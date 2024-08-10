@@ -2,8 +2,8 @@
     caps [ spc i j k l
 )
 (defvar
-  tap-timeout   125
-  hold-timeout  125
+  tap-timeout   01
+  hold-timeout  145
   tt $tap-timeout
   ht $hold-timeout
 )
