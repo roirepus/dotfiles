@@ -1,11 +1,48 @@
 (defsrc
-    caps
+    caps [ spc i j k l
+)
+(defvar
+  tap-timeout   125
+  hold-timeout  125
+  tt $tap-timeout
+  ht $hold-timeout
 )
 
 (defalias
-    escctrl (tap-hold 125 150 esc lctrl)
+    escctrl (tap-hold $tt $ht esc lctrl)
 )
+(defalias
+    bracketctrl (tap-hold $tt $ht [ lctrl)
+)
+
+(defalias
+  spacewin(tap-hold $tt $ht spc lmeta)
+)
+(defalias
+iup (tap-hold $tt $ht i up)
+)
+(defalias
+jleft(tap-hold $tt $ht j lft)
+)
+(defalias
+kdown (tap-hold $tt $ht k down)
+)
+
+(defalias
+lright (tap-hold $tt $ht l rght)
+)
+
+
+
+
+
 
 (deflayer base
     @escctrl
+	@bracketctrl
+	@spacewin
+	@iup
+	@jleft
+	@kdown
+	@lright
 )
