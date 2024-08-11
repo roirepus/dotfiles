@@ -18,35 +18,46 @@ esc
 ;; base layer
 (deflayer qwerty
 lrld 
+
  f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
 @capswitch
-  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    @bracketctrl    ]    \
+  grv 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @tabmod  q    w    e    r    t    y    u    i    o    p    @bracketctrl    @bracketalt    \
   @esccaps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet @num           @spacewin            ralt  rctl
+  lctl lmet @laltmod           @spacewin            ralt  rctl
 )
 
-(deflayer numbers
+(deflayer leftaltmod
 lrld
 
  f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
 @capswitch
 
-	 @grl  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    up    o    p    @bracketctrl    ]    \
-  @esccaps a    s    d    f    g    h    lft    down    rght    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet  lalt         @spacewin            ralt  rctl
-
+	 grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  1    2    3    4    5    6    7    8    9    0    @bracketctrl    ]    \
+  @esccaps RS-1    RS-2   RS-3    RS-4    RS-5    lft    down    up    rght    ;    '    bspc
+  lsft z    x    c    RS-6    RS-7    RS-8    m    ,    .    /    rsft
+  lctl lmet  lalt         @spacewin            ralt  rctl	
 )
 
+(deflayer lefttabmod
+f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+esc
+
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @tabmod  q    w    e    r    t    y    -   RS-- 🔢₌  +    [    ]    \
+  caps a    s    d    f    g    h    j    RS-9    RS-0   RS-\     \    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt  rctl 
+)
 
 (defalias
   capswitch (one-shot-press 1 caps)
-    grl (tap-hold 200 200 grv (layer-toggle numbers))
-  esccaps (tap-hold $tt $ht esc lctl)
-  num (tap-hold $tt $ht lalt(layer-while-held numbers) )
   spacewin(tap-hold $tt $ht spc lmet)
   bracketctrl(tap-hold $tt $ht [ lctrl )
+  bracketalt(tap-hold $tt $ht ] lalt )
+  esccaps (tap-hold $tt $ht esc lctl)
+  laltmod (tap-hold $tt $ht lalt(layer-while-held leftaltmod) )
+  tabmod (tap-hold $tt $ht tab (layer-while-held lefttabmod) )
 )
