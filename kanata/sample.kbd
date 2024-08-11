@@ -1,5 +1,5 @@
 (defsrc
-f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+f1
 esc
 
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -17,11 +17,10 @@ esc
 
 ;; base layer
 (deflayer qwerty
-lrld 
- f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+lrld
 @capswitch
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    @bracketctrl    ]    \
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   @esccaps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet @num           @spacewin            ralt  rctl
@@ -29,12 +28,10 @@ lrld
 
 (deflayer numbers
 lrld
-
- f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
 @capswitch
 
 	 @grl  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    up    o    p    @bracketctrl    ]    \
+  tab  q    w    e    r    t    y    u    up    o    p    [    ]    \
   @esccaps a    s    d    f    g    h    lft    down    rght    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet  lalt         @spacewin            ralt  rctl
@@ -48,5 +45,4 @@ lrld
   esccaps (tap-hold $tt $ht esc lctl)
   num (tap-hold $tt $ht lalt(layer-while-held numbers) )
   spacewin(tap-hold $tt $ht spc lmet)
-  bracketctrl(tap-hold $tt $ht [ lctrl )
 )
