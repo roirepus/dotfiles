@@ -1,0 +1,3 @@
+pane	2	1	1	:*	0	uwu	:/home/charm	1	zsh	:
+window	2	1	:[tmux]	1	:*	b5fe,183x42,0,0,1	:
+state	2	
