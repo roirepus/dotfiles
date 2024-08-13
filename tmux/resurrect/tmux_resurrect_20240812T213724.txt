@@ -1,0 +1,9 @@
+pane	3	1	1	:*	0	uwu	:/home/charm	1	nvim	:nvim .config/kanata/config.kbd
+pane	4	1	1	:*	0	uwu	:/home/charm	1	zsh	:
+pane	5	1	1	:*	0	uwu	:/home/charm	1	sudo	:sudo kanata -c .config/kanata/config.kbd
+pane	7	1	1	:*	0	uwu	:/home/charm	1	zsh	:
+window	3	1	:nvim	1	:*	b600,183x42,0,0,3	:
+window	4	1	:zsh	1	:*	c761,48x19,0,0,4	:
+window	5	1	:sudo	1	:*	b603,183x42,0,0,6	:
+window	7	1	:zsh	1	:*	b605,183x42,0,0,8	:
+state	3	4

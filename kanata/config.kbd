@@ -1,69 +1,212 @@
 (defsrc
-f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
-esc
 
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt  rctl
+f1
+
+tab  	q	w	e	r	t			y	u	i	o	p	[	]
+
+caps	a	s	d	f	g			h	j	k	l	;	'	ret
+
+lsft	z	x	c	v	b			n	m	,	.	/	rsft
+						
+					lalt	spc		
+	
 )
+
 (defvar
   tap-timeout   1
-  hold-timeout  140
+  hold-timeout  135
   tt $tap-timeout
   ht $hold-timeout
 )
+(deflayer base
 
-;; base layer
-(deflayer qwerty
-lrld 
-
- f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
-@capswitch
-  grv 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab q    w    e    r    t    y    u    i    o    p    @bracketctrl    @bracketalt    \
-  @esccaps a    s    d    f    g    h    j    k    l    @vimmod    @tmuxmod    @retmet
-  lsft z    x    c    v    b    n    m    ,    .    @numberlayer    rsft
-  lctl lmet lalt           @spcmod            ralt  rctl 
-)   
-  
-
-(deflayer spcmod
 lrld
 
- f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
-@capswitch
+tab  	q	w	e	r	t			y	u	i	o	p	@bracketctrl	@bracketalt
 
-	 grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  RS-1    RS-2    RS-3    RS-4    RS-5    -    RS--    🔢₌    +    RS-\    [    ]    \
-  @esccaps RS-6    RS-7    RS-8    RS-9    RS-0    lft    down    up    rght    ;    '    bspc
-  lmet z    x    c   v    b     n   m    ,    .    /    lmet
-  lctl lmet  lalt         spc            ralt  rctl
+@caps2esc	a	s	d	f	g			h	j	k	l	@vimmod	@tmuxmod		ret
 
+lsft	z	x	c	v	b			n	m	,	.	/	rsft
+						
+					@laltmet	@symbollayer		
+	
 )
 
-(deflayer numbers
-f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
-esc
 
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  1    2   3    4    5    y    u    i    o    p    [    ]    \
-  caps 6    7    8    9    0    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt  rctl
+(deflayer symbols
+_
+ _		1	2	3	4	5			`	_	_	_	_	@bracketctrl	@bracketalt
+ 
+ lalt		6	7	8	9	0			lft	down	up	rght	_	_	bspc
+
+ @shiftslayer 		_	_	_	_	_			-	=	[	]	\	@shiftslayer
+
+ 				_		_
 )
+
+(deflayer shiftsymbols
+_
+ _		RS-1	RS-2	RS-3	RS-4	RS-5			RS-`	_	_	_	_	_ 					-
+ 
+ _		RS-6	RS-7	RS-8	RS-9	RS-0			_	_	_	_	_	_ _
+
+ _ 		_	_	_	_	_			RS--	RS-=	RS-[	RS-]	RS-\	_
+
+ 				_		_
+)
+
 
 
 (defalias
-  capswitch (one-shot-press 1 caps)
-  bracketctrl(tap-hold $tt $ht [ lctrl )
-  bracketalt(tap-hold $tt $ht ] lalt )
-  retmet(tap-hold $tt $ht ret lmet )
-  tmuxmod(tap-hold $tt $ht ' C-f )
-  vimmod(tap-hold $tt $ht ; RS-; )
-  esccaps (tap-hold $tt $ht esc lctl)
-  spcmod (tap-hold $tt $ht spc(layer-while-held spcmod) )
-  numberlayer (tap-hold $tt $ht / (layer-while-held numbers) )
+	caps2esc(tap-hold $tt $ht esc lctrl)
+	vimmod(tap-hold $tt $ht ; S-;)
+	tmuxmod(tap-hold $tt $ht ' C-f)
+	laltmet(tap-hold $tt $ht lalt lmet)
+	bracketctrl(tap-hold $tt $ht [ lctrl)
+	bracketalt(tap-hold $tt $ht ] lalt )
+	symbollayer(tap-hold $tt $ht spc (layer-while-held symbols))
+	shiftslayer(tap-hold $tt $ht spc (layer-while-held shiftsymbols))
 )
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;(defsrc
+;;f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+;;esc
+;;
+;;  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;;  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+;;  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+;;  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+;;  lctl lmet lalt           spc            ralt  rctl
+;;)
+;;(defvar
+;;  tap-timeout   1
+;;  hold-timeout  140
+;;  tt $tap-timeout
+;;  ht $hold-timeout
+;;)
+
+
+;; base layer
+;;(deflayer qwerty
+;;lrld 
+;;
+;; f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+;;@capswitch
+;;  grv 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;;  tab q    w    e    r    t    y    u    i    o    p    @bracketctrl    @bracketalt    \
+;;  @esccaps a    s    d    f    g    h    j    k    l    @vimmod    @tmuxmod    @retmet
+;;  lsft z    x    c    v    b    n    m    ,    .    @numberlayer    rsft
+;;  lctl lmet lalt           @spcmod            ralt  rctl 
+;;)   
+;;  
+;;
+;;(deflayer spcmod
+;;lrld
+;;
+;; f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+;;@capswitch
+;;
+;;	 grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;;  tab  RS-1    RS-2    RS-3    RS-4    RS-5    -    RS--    🔢₌    +    RS-\    @bracketctrl    @bracketalt    \
+;;  @esccaps RS-6    RS-7    RS-8    RS-9    RS-0    lft    down    up    rght    ;    '    bspc
+;;  lsft z    x    c   v    b     n   m    ,    .    @numberlayer    lmet
+;;  lsft lmet  lalt         spc            ralt  rctl
+;;
+;;)
+;;
+;;(deflayer numbers
+;;f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+;;esc
+;;
+;;  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;;  tab  1    2   3    4    5    y    u    i    o    p    [    ]    \
+;;  caps 6    7    8    9    0    h    j    k    l    ;    '    ret
+;;  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+;;  lctl lmet lalt           spc            ralt  rctl
+;;)
+;;
+;;
+;;(defalias
+;;  capswitch (one-shot-press 1 caps)
+;;  bracketctrl(tap-hold $tt $ht [ lctrl )
+;;  bracketalt(tap-hold $tt $ht ] lalt )
+;;  retmet(tap-hold $tt $ht ret lmet )
+;;  tmuxmod(tap-hold $tt $ht ' C-f )
+;;  vimmod(tap-hold $tt $ht ; RS-; )
+;;  esccaps (tap-hold $tt $ht esc lctl)
+;;  spcmod (tap-hold $tt $ht spc(layer-while-held spcmod) )
+;;  numberlayer (tap-hold $tt $ht / (layer-while-held numbers) )
+;;

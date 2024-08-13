@@ -1,0 +1,5 @@
+pane	5	1	1	:*	0	uwu	:/home/charm	1	nvim	:nvim /home/charm/.config/tmux/tmux.conf
+pane	6	1	1	:*	0	uwu	:/home/charm	1	zsh	:
+window	5	1	:nvim	1	:*	c4a0,79x37,0,0,3	:
+window	6	1	:zsh	1	:*	c4a1,79x37,0,0,4	:
+state	5	6
