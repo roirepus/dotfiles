@@ -1,7 +1,7 @@
 (defsrc
 
 f1
-
+			3 	9
 tab  	q	w	e	r	t			y	u	i	o	p	[	]
 
 caps	a	s	d	f	g			h	j	k	l	;	'	ret
@@ -14,19 +14,20 @@ lsft	z	x	c	v	b			n	m	,	.	/	rsft
 
 (defvar
   tap-timeout   1
-  hold-timeout  135
+  hold-timeout  170
   tt $tap-timeout
   ht $hold-timeout
 )
 (deflayer base
 
 lrld
+			@threemet		@ninemet
 
 tab  	q	w	e	r	t			y	u	i	o	p	@bracketctrl	@bracketalt
 
 @caps2esc	a	s	d	f	g			h	j	k	l	@vimmod	@tmuxmod		ret
 
-lsft	z	x	c	v	b			n	m	,	.	/	rsft
+lsft	z	x	c	v	b			n	m	,	.	@slashmet	rsft
 						
 					@laltmet	@symbollayer		
 	
@@ -34,25 +35,27 @@ lsft	z	x	c	v	b			n	m	,	.	/	rsft
 
 
 (deflayer symbols
-_
- _		1	2	3	4	5			`	_	_	_	_	@bracketctrl	@bracketalt
+lrld
+							_  _
+ tab		1	2	3	4	5			`	u	i	o	p	@bracketctrl	@bracketalt
  
- lalt		6	7	8	9	0			lft	down	up	rght	_	_	bspc
+ @caps2esc		6	7	8	9	0			lft	down	up	rght	;	'	bspc
 
- @shiftslayer 		_	_	_	_	_			-	=	[	]	\	@shiftslayer
+ @shiftslayer 		z	x	c	v				-	=	[	]	\	_ @shiftslayer
 
- 				_		_
+ 				lalt			spc	
 )
 
-(deflayer shiftsymbols
-_
- _		RS-1	RS-2	RS-3	RS-4	RS-5			RS-`	_	_	_	_	_ 					-
+(deflayer shiftsymbols 
+lrld
+					_  _
+ tab		RS-1	RS-2	RS-3	RS-4	RS-5			RS-`	u	i	o	p	[	]
  
- _		RS-6	RS-7	RS-8	RS-9	RS-0			_	_	_	_	_	_ _
+ @caps2esc		RS-6	RS-7	RS-8	RS-9	RS-0			h	j	k	l	;	'  ret
 
- _ 		_	_	_	_	_			RS--	RS-=	RS-[	RS-]	RS-\	_
+ lsft 		z	x	c	v				RS--	RS-=	RS-[	RS-]	RS-\	/ 	lsft
 
- 				_		_
+ 				lalt		spc	
 )
 
 
@@ -61,9 +64,12 @@ _
 	caps2esc(tap-hold $tt $ht esc lctrl)
 	vimmod(tap-hold $tt $ht ; S-;)
 	tmuxmod(tap-hold $tt $ht ' C-f)
+	ninemet(tap-hold $tt $ht 9 lmet)
+	threemet(tap-hold $tt $ht 3 lmet)
 	laltmet(tap-hold $tt $ht lalt lmet)
 	bracketctrl(tap-hold $tt $ht [ lctrl)
 	bracketalt(tap-hold $tt $ht ] lalt )
+	slashmet(tap-hold $tt $ht / lmet )
 	symbollayer(tap-hold $tt $ht spc (layer-while-held symbols))
 	shiftslayer(tap-hold $tt $ht spc (layer-while-held shiftsymbols))
 )
@@ -165,7 +171,7 @@ _
 ;;
 ;; f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
 ;;@capswitch
-;;  grv 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;;  grv 1    2    @threemet    4    5    6    7    8    @ninemet    0    -    =    bspc
 ;;  tab q    w    e    r    t    y    u    i    o    p    @bracketctrl    @bracketalt    \
 ;;  @esccaps a    s    d    f    g    h    j    k    l    @vimmod    @tmuxmod    @retmet
 ;;  lsft z    x    c    v    b    n    m    ,    .    @numberlayer    rsft
