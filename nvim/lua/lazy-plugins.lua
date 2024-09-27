@@ -53,6 +53,11 @@ require('lazy').setup({
   -- lazy.nvim
 
   ----------------------------------------------------------------------------------------------------------------
+  ---auto-save
+  {
+    "pocco81/auto-save.nvim"
+  },
+
   { 'voldikss/vim-floaterm' },
   {
     "ThePrimeagen/vim-be-good",

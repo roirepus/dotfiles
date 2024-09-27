@@ -1,5 +1,0 @@
-pane	2	1	1	:*	0	uwu	:/home/charm	1	nvim	:nvim .config/kanata/config.kbd
-nvim .config/kitty/kitty.conf
-nvim .config/kanata/config.kbd
-window	2	1	:nvim	1	:*	b05e,88x32,0,0,1	:
-state	2	

@@ -1,0 +1,17 @@
+pane	0	1	1	:*	0	uwu	:/home/charm/backend/project	1	nvim	:npm init
+npm init -
+nvim package
+nvim package.json
+nvim package
+nvim package.json
+npm run start
+nvim
+nvim
+nvim
+nvim
+pane	0	2	0	:	0	uwu	:/home/charm/backend	1	zsh	:
+pane	0	3	0	:-	0	uwu	:/home/charm/backend	1	zsh	:
+window	0	1	:nvim	1	:*	c320,76x37,0,0,3	:
+window	0	2	:frontend	0	:	c4a1,79x37,0,0,4	off
+window	0	3	:backend	0	:-	c4a2,79x37,0,0,5	off
+state	0	

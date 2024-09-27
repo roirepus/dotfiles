@@ -1,4 +1,0 @@
-pane	2	1	1	:*	0	uwu	:/home/charm/.config	1	nvim	:nvim tmux/tmux.reset.conf
-nvim tmux/tmux.conf
-window	2	1	:nvim	1	:*	b1e0,87x42,0,0,3	:
-state	2	

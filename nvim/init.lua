@@ -89,6 +89,10 @@ require 'lsp-setup'
 -- [[ Configure nvim-cmp ]]
 -- (completion)
 require 'cmp-setup'
+require './plugins/auto-save'
+
+
+
 
 --mappings
 require 'mappings'

@@ -1,0 +1,25 @@
+pane	0	1	1	:*	0	uwu	:/home/charm/backend/project	1	zsh	:
+pane	0	2	0	:	0	uwu	:/home/charm/backend	1	zsh	:
+pane	0	3	0	:-	0	uwu	:/home/charm/backend	1	zsh	:
+pane	1	1	1	:*	0	uwu	:/home/charm	1	zsh	:
+pane	2	1	0	:	0	uwu	:/home/charm	1	zsh	:
+pane	2	2	0	:-	0	uwu	:/home/charm/dotfiles/nvim/lua	1	nvim	:nvim /home/charm/.config/nvim/lua/
+pane	2	3	1	:*	0	uwu	:/home/charm	1	zsh	:
+pane	3	1	0	:-	0	uwu	:/home/charm/cohort/http-server-1	1	nvim	:nvim /home/charm/.config/tmux
+nvim
+nvim
+nvim
+ping roirepus.in
+nvim
+pane	3	2	1	:*	0	uwu	:/home/charm/cohort/http-server-1	1	node	:npm exec live-server
+node index.js
+window	0	1	:zsh	1	:*	c49e,79x37,0,0,1	:
+window	0	2	:frontend	0	:	c49f,79x37,0,0,2	off
+window	0	3	:backend	0	:-	c4a0,79x37,0,0,3	off
+window	1	1	:zsh	1	:*	c4a1,79x37,0,0,4	:
+window	2	1	:zsh	0	:	c4a2,79x37,0,0,5	:
+window	2	2	:nvim	0	:-	c4a3,79x37,0,0,6	:
+window	2	3	:zsh	1	:*	c4a4,79x37,0,0,7	:
+window	3	1	:nvim	0	:-	c1e5,83x37,0,0,8	:
+window	3	2	:node	1	:*	611f,83x37,0,0,10	:
+state	3	2
