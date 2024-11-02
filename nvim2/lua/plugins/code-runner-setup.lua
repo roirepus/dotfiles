@@ -15,8 +15,7 @@ require("code_runner").setup {
 
     go = "go run $fileName",
 
-    typescript = "tsc ./src/$fileName && node ./dist/$fileNameWithoutExt" .. ".js",
-    --typescript = "tsc -b && node $fileNameWithoutExt" .. ".js",
+    typescript = "tsc $fileName && node $fileNameWithoutExt" .. ".js",
 
   },
 

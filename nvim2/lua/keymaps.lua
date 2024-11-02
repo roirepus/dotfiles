@@ -41,7 +41,7 @@ vim.keymap.set("n", "<leader>run", ":RunCode<CR>")
 vim.keymap.set("n", "<leader>er", ":RunClose<CR>")
 --floaterm keymap
 
-vim.keymap.set("n", ":t", ":FloatermNew<CR>")
+vim.keymap.set("n", ":term", ":FloatermNew<CR>")
 
 -- vim: ts=2 sts=2 sw=2 et
 -- Use ctrl-[hjkl] to select the active split!
@@ -114,5 +114,3 @@ vim.keymap.set('n', "G", "Gzz$")
 vim.keymap.set('v', "G", "Gzz$")
 vim.keymap.set('n', "gg", "gg0")
 vim.keymap.set('v', "gg", "gg0")
-vim.keymap.set('n', "j", "jzz")
-vim.keymap.set('n', "k", "kzz")

@@ -1,5 +1,5 @@
 (defsrc
-
+esc
 f1
 			3 	9 0
 tab  	q	w	e	r	t			y	u	i	o	p	[	]
@@ -14,12 +14,13 @@ lsft	z	x	c	v	b			n	m	,	.	/	rsft
 
 (defvar
   tap-timeout   1
-  hold-timeout  160
+  hold-timeout  140
   tt $tap-timeout
   ht $hold-timeout
 )
 (deflayer base
 
+caps
 lrld
 			lmet		lmet spc
 
@@ -27,7 +28,7 @@ tab  	q	w	e	r	t			y	u	i	o	p lctrl lalt
 
 @caps2esc	a	s	d	f	g			h	j	k	l	@vimmod	@tmuxmod		ret
 
-lsft	z	x	c	v	b			n	m	,	.	@slashmet	rsft
+lsft	z	x	c	v	b			n	m	,	.	/	rsft
 						
 				lalt		@symbollayer		
 	
@@ -35,18 +36,20 @@ lsft	z	x	c	v	b			n	m	,	.	@slashmet	rsft
 
 
 (deflayer symbols
+caps
 lrld
 							_  _ _
  tab		1	2	3	4	5			`	-	=	[	]	lctrl	lalt
  
  @caps2esc		6	7	8	9	0			lft	down	up	rght	;	'	bspc
 
- @shiftslayer 		z	x	c	v				\	=	[	]	\	_ @shiftslayer
+ @shiftslayer 		z	x	c	v				b	\	m	,	.	/ @shiftslayer
 
  				lalt			spc	
-)
+)  
 
 (deflayer shiftsymbols 
+caps
 lrld
 					_  _ _
  tab		RS-1	RS-2	RS-3	RS-4	RS-5			RS-`		RS--	RS-=	RS-[	RS-] [	]
@@ -61,6 +64,7 @@ lrld
 
 
 (defalias
+	esc2caps(tap-hold $tt $ht esc lctrl)
 	caps2esc(tap-hold $tt $ht esc lctrl)
 	vimmod(tap-hold $tt $ht ; S-;)
 	tmuxmod(tap-hold $tt $ht ' C-f)

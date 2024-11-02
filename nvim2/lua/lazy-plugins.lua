@@ -63,9 +63,6 @@ require('lazy').setup({
     "ThePrimeagen/vim-be-good",
   },
   {
-    "prisma/vim-prisma",
-  },
-  {
     'windwp/nvim-autopairs',
     -- event = "lazy",
     opts = {} -- this is equalent to setup({}) function

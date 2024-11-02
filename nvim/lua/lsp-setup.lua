@@ -81,11 +81,11 @@ local servers = {
   gopls = {},
   pyright = {},
   rust_analyzer = {},
-  tsserver = { filetypes = { "javascriptreact", "typescriptreact", "typescript", "javascript", "jsx" } },
-  tailwindcss = { filetypes = { "typescriptreact", "javascriptreact", "javascript", 'jsx' } },
-  eslint = {},
+  tsserver = { filetypes = { "javascriptreact", "typescriptreact", "typescript", "javascript", "jsx" }, },
+  tailwindcss = { filetypes = { "typescriptreact", "javascriptreact", 'jsx' }, },
+  --eslint = { "javascript", "typescript" },
   --html = { filetypes = { 'html', 'javascript', 'javascriptreact', "jsx", "typescriptreact" } },
-  emmet_ls = { filetypes = { "html", "typescriptreact", "javascriptreact", "jsx" } },
+  --emmet_ls = { filetypes = { "html", "typescriptreact", "javascriptreact", "jsx" }, },
 
   lua_ls = {
     Lua = {
