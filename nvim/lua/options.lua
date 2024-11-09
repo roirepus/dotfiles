@@ -2,7 +2,7 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 -- Swap file settings
-vim.opt.swapfile = true
+vim.opt.swapfile = false
 vim.opt.cmdheight = 0
 vim.opt.colorcolumn = "80"
 vim.opt.fcs = { eob = " " }
@@ -15,6 +15,8 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
 
 -- vim.api.nvim_set_option('formatoptions', vim.bo.formatoptions:gsub("[cro]", ""))
 vim.api.nvim_create_autocmd('BufEnter', {

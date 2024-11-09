@@ -116,3 +116,14 @@ vim.keymap.set('n', "gg", "gg0")
 vim.keymap.set('v', "gg", "gg0")
 vim.keymap.set('n', "j", "jzz")
 vim.keymap.set('n', "k", "kzz")
+vim.keymap.set('n', "o", "o<esc>zzi")
+vim.keymap.set('n', "O", "O<esc>zzi")
+
+
+
+--undo tree undo tree
+
+vim.keymap.set('n', "<leader>u", vim.cmd.UndotreeToggle)
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
