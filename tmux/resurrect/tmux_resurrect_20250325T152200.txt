@@ -1,0 +1,5 @@
+pane	0	1	0	:-	0	uwu	:/home/charm/projects/mono	1	node	:node /home/charm/.local/share/pnpm/.tools/pnpm/10.5.2/node_modules/.pnpm/pnpm@10.5.2/node_modules/pnpm/bin/pnpm.cjs dlx shadcn@latest init
+pane	0	2	1	:*	0	uwu	:/home/charm/dotfiles/tmux	1	nvim	:nvim /home/charm/.config/tmux
+window	0	1	:node	0	:-	c0a5,79x36,0,0,8	:
+window	0	2	:nvim	1	:*	c0a6,79x36,0,0,9	:
+state	0	

@@ -77,6 +77,7 @@ require 'keymaps'
 -- [[ Configure Telescope ]]
 -- (fuzzy finder)
 require './plugins/telescope-setup'
+--require './plugins/git-graph'
 
 -- [[ Configure Treesitter ]]
 -- (syntax parser for highlighting)
@@ -104,10 +105,24 @@ require 'kickstart/plugins/debug'
 require 'kickstart/plugins/autoformat'
 -- setups
 require './plugins/harpoon-setup'
+--require './plugins/codeium-setup'
 require './plugins/code-runner-setup'
 require './plugins/competitest-setup'
 require './plugins/gitsigns-setup'
 require './plugins/nvim-tree-setup'
+require './plugins/avante-setup'
+require './plugins/avante-setup'
+require './plugins/which-key-setup'
+
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   pattern = "*",
+--   callback = function()
+--     if vim.fn.bufname("#") ~= "" then
+--       vim.cmd("bdelete #")
+--     end
+--   end,
+-- })
+--
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

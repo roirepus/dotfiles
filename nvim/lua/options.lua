@@ -6,15 +6,27 @@ vim.opt.swapfile = false
 vim.opt.cmdheight = 0
 vim.opt.colorcolumn = "80"
 vim.opt.fcs = { eob = " " }
+vim.opt.wrap = true
+
+
 
 -- Set highlight on search
 vim.o.hlsearch = false
-
+--indentation
+vim.o.autoindent = true
+vim.o.smartindent = false
+vim.o.smarttab = true
+vim.o.expandtab = true
+vim.o.cindent = true
+vim.opt.formatoptions:append("o")
+vim.cmd("filetype plugin indent on")
+--vim.opt.indentexpr=
+--vim.opt.formatoptions:append("O")
 -- Make line numbers default
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 0
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
@@ -41,6 +53,8 @@ vim.o.mouse = 'v'
 vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
+--vim.opt.smartindent = true
+--vim.opt.cindent = false
 vim.o.breakindent = true
 
 -- Save undo history

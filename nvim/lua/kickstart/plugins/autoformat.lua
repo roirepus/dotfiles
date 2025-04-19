@@ -54,7 +54,7 @@ return {
         -- Auto-format on save
 
         -- Keybinding for manual formatting
-        --vim.keymap.set('n', "<leader>fo", ":Format<CR>")
+        vim.keymap.set('n', "<leader>fo", ":Format<CR>")
 
         --  Run the formatting command for the LSP that has just attached.
         vim.api.nvim_create_autocmd('BufWritePre', {

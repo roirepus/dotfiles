@@ -86,7 +86,7 @@ curTheme=$(echo "$ctlLine" | awk -F '|' '{print $2}')
 fullPath=$(echo "$ctlLine" | awk -F '|' '{print $NF}' | sed "s+~+$HOME+")
 wallName=$(basename "$fullPath")
 wallPath=$(dirname "$fullPath")
-mapfile -d '' Wallist < <(find ${wallPath} -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -print0 | sort -z)
+mapfile -d '' Wallist < <(find ${wallPath} -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname ".webp"\) -print0 | sort -z)
 
 if [ ! -f "$fullPath" ] ; then
     if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/swww/$curTheme" ] ; then

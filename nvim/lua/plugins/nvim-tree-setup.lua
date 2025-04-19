@@ -3,6 +3,14 @@ require('nvim-tree').setup {
     width = 30,
     relativenumber = true,
   },
+  -- actions = {
+  --   open_file = {
+  --     quit_on_open = true,
+  --     window_picker = {
+  --       enable = false,
+  --     },
+  --   },
+  -- },
 
   filters = {
     dotfiles = false,

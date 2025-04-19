@@ -15,7 +15,7 @@ require('telescope').setup {
     },
     layout_config = {
       width = 0.9,
-      preview_width = 0.6,
+      --      preview_width = 0.6,
       --preview_cutoff = 120,
     },
   },

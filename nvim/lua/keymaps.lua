@@ -69,12 +69,12 @@ vim.keymap.set('n', "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>")
 vim.keymap.set('n', "<leader>fo", ":Format<CR>")
 
 -- Function to execute multiple commands
-local function on_save()
-  vim.cmd("Format")
-  -- Add other commands here
-  --vim.cmd("AnotherCommand")
-  --vim.cmd("YetAnotherCommand")
-end
+--local function on_save()
+--  vim.cmd("Format")
+-- Add other commands here
+--vim.cmd("AnotherCommand")
+--vim.cmd("YetAnotherCommand")
+--end
 
 -- Auto-command to run the function before saving
 --vim.api.nvim_create_autocmd("BufWritePre", {
@@ -96,7 +96,7 @@ end
 vim.api.nvim_set_keymap('n', '<leader>"', 'viw<esc>a"<esc>hbi"<esc>', { noremap = true, silent = true })
 --wrap selection in quotes
 
-vim.api.nvim_set_keymap('v', '<leader>"', '<esc>`<i"<esc>`>a"<esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<leader>"', '<esc>`<i"<esc>`>f"a<esc>', { noremap = true, silent = true })
 -- wrap in brackerts
 vim.api.nvim_set_keymap('n', '<leader>[', 'viw<esc>a]<esc>hbi[<esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>(', 'viw<esc>a)<esc>hbi(<esc>', { noremap = true, silent = true })
@@ -127,3 +127,22 @@ vim.keymap.set('n', "<leader>u", vim.cmd.UndotreeToggle)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+
+vim.keymap.set("n", ":md", ":MarkdownPreviewToggle");
+
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   pattern = "*",
+--   callback = function()
+--     if vim.fn.bufname("#") ~= "" then
+--       vim.cmd("bdelete #")
+--     end
+--   end,
+-- })
+
+--vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+vim.keymap.set("v", "<C-r>", "\"hy:%s/<C-r>h//gc<left><left><left>")
+
+vim.api.nvim_set_keymap("n", "cil",
+  [[:execute "s/\\V" . escape(expand("<cword>"), "/") . "/" . input("Replace with: ") . "/g"<CR>]],
+  { noremap = true, silent = false })

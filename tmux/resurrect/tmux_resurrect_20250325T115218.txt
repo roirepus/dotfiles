@@ -1,0 +1,13 @@
+pane	0	1	0	:	0	uwu	:/home/charm/projects/edmono	1	nvim	:nvim
+pane	0	2	0	:	0	uwu	:/home/charm/projects/edmono	1	node	:node /home/charm/.local/share/pnpm/.tools/pnpm/10.5.2/node_modules/.pnpm/pnpm@10.5.2/node_modules/pnpm/bin/pnpm.cjs run dev
+pane	0	3	0	:	0	uwu	:/home/charm/projects/edventure	1	nvim	:nvim
+pane	0	4	0	:	0	uwu	:/home/charm/os/cal.com	1	nvim	:nvim
+pane	0	5	1	:*	0	uwu	:/home/charm/dotfiles/tmux	1	nvim	:nvim /home/charm/.config/tmux
+pane	0	6	0	:-	0	uwu	:/home/charm/dotfiles/tmux	1	nvim	:nvim /home/charm/.config/tmux
+window	0	1	:nvim	0	:	c09d,79x36,0,0,0	:
+window	0	2	:node	0	:	c09f,79x36,0,0,2	:
+window	0	3	:nvim	0	:	c0a0,79x36,0,0,3	:
+window	0	4	:nvim	0	:	c0a1,79x36,0,0,4	:
+window	0	5	:nvim	1	:*	c0a2,79x36,0,0,5	:
+window	0	6	:nvim	0	:-	c0a3,79x36,0,0,6	:
+state	0	
