@@ -251,6 +251,9 @@ require('lazy').setup({
     build = function() vim.fn["mkdp#util#install"]() end,
 
   },
+  {
+    "HiPhish/rainbow-delimiters.nvim"
+  },
   --avante setup
   {
     "yetone/avante.nvim",
@@ -311,6 +314,7 @@ require('lazy').setup({
       },
     },
   },
+
   -- {
   --   "yetone/avante.nvim",
   --   event = "VeryLazy"

@@ -116,8 +116,10 @@ vim.keymap.set('n', "gg", "gg0")
 vim.keymap.set('v', "gg", "gg0")
 vim.keymap.set('n', "j", "jzz")
 vim.keymap.set('n', "k", "kzz")
-vim.keymap.set('n', "o", "o<esc>zzi")
-vim.keymap.set('n', "O", "O<esc>zzi")
+-- vim.keymap.set('n', "o", "o<esc>zzi")
+-- vim.keymap.set('n', "O", "O<esc>zzi")
+-- vim.keymap.set('n', "o", "o<esc>==zzA", { noremap = true, silent = true })
+-- vim.keymap.set('n', "O", "O<esc>==zzA", { noremap = true, silent = true })
 
 
 

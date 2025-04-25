@@ -15,10 +15,6 @@ vim.o.hlsearch = false
 --indentation
 vim.o.autoindent = true
 vim.o.smartindent = false
-vim.o.smarttab = true
-vim.o.expandtab = true
-vim.o.cindent = true
-vim.opt.formatoptions:append("o")
 vim.cmd("filetype plugin indent on")
 --vim.opt.indentexpr=
 --vim.opt.formatoptions:append("O")
@@ -27,6 +23,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+vim.o.expandtab = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 

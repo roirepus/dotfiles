@@ -8,8 +8,8 @@ require("code_runner").setup {
     cpp = {
       "cd $dir &&",
       "g++ $fileName -Wall -std=c++2b ",
-      "-o $dir/compiled/$fileNameWithoutExt &&",
-      "$dir/compiled/$fileNameWithoutExt",
+      "-o $dir/.compiled/$fileNameWithoutExt &&",
+      "$dir/.compiled/$fileNameWithoutExt",
     },
     javascript = "node $fileName",
 
