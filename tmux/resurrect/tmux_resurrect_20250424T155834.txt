@@ -1,8 +1,0 @@
-pane	0	1	0	:-	0	uwu	:/home/charm/projects/bookbridge	1	nvim	:nvim
-nvim
-pane	0	2	0	:	0	uwu	:/home/charm/projects/bookbridge	1	node	:node /home/charm/.local/share/pnpm/.tools/pnpm/10.9.0/node_modules/.pnpm/pnpm@10.9.0/node_modules/pnpm/bin/pnpm.cjs run dev
-pane	0	3	1	:*	0	uwu	:/home/charm/dotfiles/tmux	1	nvim	:nvim /home/charm/.config/tmux
-window	0	1	:nvim	0	:-	c0dd,89x36,0,0,0	:
-window	0	2	:node	0	:	c0df,89x36,0,0,2	:
-window	0	3	:nvim	1	:*	c0e0,89x36,0,0,3	:
-state	0	
