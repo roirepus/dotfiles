@@ -39,9 +39,9 @@ lsft	z	x	c	v	b			n	m	,	.	/	rsft
 caps
 lrld
 							_  _ _
- tab		1	2	3	4	5			`	-	=	[	]	lctrl	lalt
- 
- caps		6	7	8	9	0			lft	down	up	rght	;	'	bspc
+ caps		1	2	3	4	5			`	-	=	[	]	lctrl	lalt
+
+ lctrl		6	7	8	9	0			lft	down	up	rght	@shiftslayer bspc	ret
 
  @shiftslayer 		z	x	c	v				b	\	m	,	.	/ @shiftslayer
 
@@ -67,7 +67,7 @@ lrld
 	esc2caps(tap-hold $tt $ht esc lctrl)
 	caps2esc(tap-hold $tt $ht esc lctrl)
 	vimmod(tap-hold $tt $ht ; S-;)
-	tmuxmod(tap-hold $tt $ht ' C-f)
+	tmuxmod(tap-hold $tt $ht ' C-b)
 	ninemet(tap-hold $tt $ht 9 lmet)
 	threemet(tap-hold $tt $ht 3 lmet)
 	laltmet(tap-hold $tt $ht lalt lmet)

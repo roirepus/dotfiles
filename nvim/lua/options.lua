@@ -39,7 +39,8 @@ vim.api.nvim_create_autocmd('BufEnter', {
 
 --colors
 vim.cmd("colorscheme catppuccin")
-vim.api.nvim_set_hl(0, 'LineNr', { fg = "white" })
+vim.api.nvim_set_hl(0, 'LineNr', { fg = "#eba0ac" })
+vim.api.nvim_set_hl(0, "NvimTreeCursorLine", { bg = "#eba0ac", fg = "#313244" })
 
 -- Enable mouse mode
 vim.o.mouse = 'v'

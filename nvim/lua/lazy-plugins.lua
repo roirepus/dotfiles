@@ -106,6 +106,10 @@ require('lazy').setup({
   },
   --{ 'windwp/nvim-autopairs' },
   { 'windwp/nvim-ts-autotag' },
+  {
+    "davidmh/mdx.nvim",
+    config = true,
+  },
 
   -- plugins for cp
   {
