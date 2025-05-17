@@ -1,0 +1,26 @@
+
+general.import = [
+   "~/.config/alacritty/catppuccin-mocha.toml"
+]
+[font]
+normal= {family="JetBrainsMono Nerd Font", style="bold"}
+size=14.0
+
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style={shape="Beam",blinking="On"}
+vi_mode_style={shape="Block"}
+thickness = 0.15
+unfocused_hollow = true
+blink_interval = 500  # Use an integer for milliseconds
+
+[window.class]
+instance = "KeymapsNvim"
+general = "KeymapsNvim"
+
+[window]
+padding = { x = 35, y = 35 }
+opacity = 0.9

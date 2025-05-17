@@ -1,4 +1,4 @@
-require("code_runner").setup {
+return {
 
   mode = "float",
   float = {
@@ -19,7 +19,5 @@ require("code_runner").setup {
     --    typescript = "tsc -b && node $./dist/fileNameWithoutExt" .. ".js",
 
   },
-
-
 
 }

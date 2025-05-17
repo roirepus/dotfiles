@@ -81,9 +81,9 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
   clangd = {},
-  gopls = {},
-  pyright = {},
-  rust_analyzer = {},
+  gopls = { filetypes = { "go" } },
+  pyright = { filetypes = { "python" } },
+  rust_analyzer = { filetypes = { "rust" } },
   ts_ls = { filetypes = { "javascriptreact", "typescriptreact", "typescript", "javascript", "jsx", "ts", "json", "mdx" }, },
   tailwindcss = { filetypes = { "typescriptreact", "javascriptreact", 'jsx', }, },
   mdx_analyzer = { filetypes = { "mdx" } },
@@ -91,7 +91,7 @@ local servers = {
   --eslint = { "javascript", "typescript" },
   --html = { filetypes = { 'html', 'javascript', 'javascriptreact', "jsx", "typescriptreact" } },
   emmet_ls = { filetypes = { "html", "typescriptreact" }, },
-
+  yamlls = { filetypes = { "yaml" } },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },

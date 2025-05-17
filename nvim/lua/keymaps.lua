@@ -13,7 +13,10 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
+vim.keymap.set('n', '<leader>f', function()
+  require("conform").format()
+end
+)
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
@@ -26,8 +29,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 --nvim-tree keymaps
-vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>tf", ":NvimTreeFocus<CR>")
+vim.keymap.set("n", "<leader>fe", ":NvimTreeToggle<CR>")
+--vim.keymap.set("n", "<leader>tf", ":NvimTreeFocus<CR>")
 
 --competitest keymaps
 vim.keymap.set("n", "<leader>cr", ":CompetiTest run<CR>")
@@ -41,7 +44,7 @@ vim.keymap.set("n", "<leader>run", ":RunCode<CR>")
 vim.keymap.set("n", "<leader>er", ":RunClose<CR>")
 --floaterm keymap
 
-vim.keymap.set("n", ":t", ":FloatermNew<CR>")
+vim.keymap.set("n", "<leader>te", ":FloatermNew --width=0.8 --height=0.8 <CR>")
 
 -- vim: ts=2 sts=2 sw=2 et
 -- Use ctrl-[hjkl] to select the active split!
@@ -57,11 +60,13 @@ vim.keymap.set('n', "n", "nzzzv")
 vim.keymap.set('n', "N", "Nzzzv")
 
 --harpoon
-vim.keymap.set('n', "<leader>hm", ":lua require('harpoon.mark').add_file()<CR>")
-vim.keymap.set('n', "<leader>ho", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+vim.keymap.set('n', "<leader>ht", ":lua require('harpoon.mark').add_file()<CR>")
+vim.keymap.set('n', "<leader>hs", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
 vim.keymap.set('n', "<leader>ha", ":lua require('harpoon.ui').nav_file(1)<CR>")
 vim.keymap.set('n', "<leader>hb", ":lua require('harpoon.ui').nav_file(2)<CR>")
 vim.keymap.set('n', "<leader>hc", ":lua require('harpoon.ui').nav_file(3)<CR>")
+vim.keymap.set('n', "<leader>hd", ":lua require('harpoon.ui').nav_file(4)<CR>")
+vim.keymap.set('n', "<leader>he", ":lua require('harpoon.ui').nav_file(5)<CR>")
 vim.keymap.set('n', "<leader>hn", ":lua require('harpoon.ui').nav_next()<CR>")
 vim.keymap.set('n', "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>")
 --format
@@ -114,8 +119,8 @@ vim.keymap.set('n', "G", "Gzz$")
 vim.keymap.set('v', "G", "Gzz$")
 vim.keymap.set('n', "gg", "gg0")
 vim.keymap.set('v', "gg", "gg0")
-vim.keymap.set('n', "j", "jzz")
-vim.keymap.set('n', "k", "kzz")
+-- vim.keymap.set('n', "j", "jzz")
+-- vim.keymap.set('n', "k", "kzz")
 -- vim.keymap.set('n', "o", "o<esc>zzi")
 -- vim.keymap.set('n', "O", "O<esc>zzi")
 -- vim.keymap.set('n', "o", "o<esc>==zzA", { noremap = true, silent = true })
