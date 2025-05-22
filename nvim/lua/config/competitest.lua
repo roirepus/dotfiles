@@ -17,4 +17,12 @@ require('competitest').setup {
   evaluate_template_modifiers = true,
   testcases_directory = "./testcases",
   testcases_use_single_file = true,
+
+  --competitest keymaps
+  vim.keymap.set("n", "<leader>cr", ":CompetiTest run<CR>"),
+  vim.keymap.set("n", "<leader>atc", ":CompetiTest add_testcase<CR>"),
+  vim.keymap.set("n", "<leader>etc", ":CompetiTest edit_testcase<CR>"),
+  vim.keymap.set("n", "<leader>qn", ":CompetiTest receive problem<CR>"),
+  vim.keymap.set("n", "<leader>ct", ":CompetiTest receive contest<CR>"),
+  vim.keymap.set("n", "<leader>show", ":CompetiTest show_ui<CR>"),
 }

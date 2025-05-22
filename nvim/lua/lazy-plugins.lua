@@ -1,18 +1,12 @@
---
---
---
---/
--- [[ Configure plugins ]]
--- NOTE: Here is where you install your plugins.
---  You can configure plugins using the `config` key.
---
---  You can also configure plugins after the setup call,
---    as they will be available in your neovim runtime.
 require('lazy').setup({
   'tpope/vim-fugitive',
+
   'tpope/vim-rhubarb',
+
   'isakbm/gitgraph.nvim',
+
   'tpope/vim-sleuth',
+
   'voldikss/vim-floaterm',
   "ThePrimeagen/vim-be-good",
   "mbbill/undotree",
@@ -25,10 +19,27 @@ require('lazy').setup({
   'nvim-lualine/lualine.nvim',
 
   require "plugins/lsp-config",
+  require "plugins/oil",
+  -- Lazy
+  require "plugins/alpha",
   {
     "davidmh/mdx.nvim",
     config = true,
   },
+  {
+    "ggandor/leap.nvim",
+    dependencies = {
+      "tpope/vim-repeat"
+    }
+  },
+
+  -- {
+  --   "folke/noice.nvim",
+  --   event = "VeryLazy",
+  --   dependencies = {
+  --     "MunifTanjim/nui.nvim",
+  --   },
+  -- },
 
   require "plugins/competitest",
   require "plugins/nvim-cmp",
@@ -39,28 +50,16 @@ require('lazy').setup({
     opts = {},
   },
 
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+  },
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
-
-
-
-  {
-    -- Highlight, edit, and navigate code
-    'nvim-treesitter/nvim-treesitter',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
-    },
-    build = ':TSUpdate',
-  },
-  {
-    {
-      'stevearc/conform.nvim',
-      opts = {},
-    }
-  },
+  { 'stevearc/conform.nvim', },
   require 'kickstart.plugins.autoformat',
   require 'kickstart.plugins.debug',
   require 'plugins/hurl',
+  require 'plugins/nvim-treesitter',
   require 'plugins/markdown-preview',
   require 'plugins/nvim-tree',
   require "plugins/catppuccin",
@@ -68,7 +67,7 @@ require('lazy').setup({
   require "plugins/nvim-autopairs",
   require "plugins/coderunner",
   require "plugins/telescope",
-  require "plugins/which-key",
+  -- require "plugins/which-key",
 }, {})
 
 --

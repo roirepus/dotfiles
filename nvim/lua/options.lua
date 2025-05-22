@@ -6,12 +6,11 @@ vim.opt.swapfile = false
 vim.opt.cmdheight = 0
 vim.opt.colorcolumn = "80"
 vim.opt.fcs = { eob = " " }
-vim.opt.wrap = true
-
-
-
+vim.opt.wrap = false
+vim.opt.laststatus = 3
 -- Set highlight on search
 vim.o.hlsearch = false
+
 --indentation
 vim.o.autoindent = true
 vim.o.smartindent = false
@@ -72,7 +71,7 @@ vim.o.timeoutlen = 300
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
-vim.o.showtabline=0
+vim.o.showtabline = 0
 
 
 -- NOTE: You should make sure your terminal supports this

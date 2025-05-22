@@ -14,7 +14,7 @@ lsft	z	x	c	v	b			n	m	,	.	/	rsft
 
 (defvar
   tap-timeout   1
-  hold-timeout  140
+  hold-timeout  160
   tt $tap-timeout
   ht $hold-timeout
 )
@@ -26,7 +26,7 @@ lrld
 
 tab  	q	w	e	r	t			y	u	i	o	p lctrl lalt
 
-@caps2esc	a	s	d	f	g			h	j	k	l	@rsftmod	@tmuxmod		ret
+@caps2esc	@mod4a @mod4s @mod4d @mod4f  @tmuxmod			@vimmod	@mod4j @mod4k @mod4l @mod4;  @mod4'		ret
 
 lsft	z	x	c	v	b			n	m	,	.	/	rsft
 						
@@ -40,12 +40,13 @@ lrld
 							_  _ _
  caps		1	2	3	4	5			`	-	=	[	]	lctrl	lalt
 
- lctrl		6	7	8	9	0			lft	down	up	rght	@shiftslayer bspc	ret
+ @shiftslayer		6	7	8	9	0			\	,	.	/	@shiftslayer bspc	ret
 
- @shiftslayer 		z	x	c	v				b	\	m	,	.	/ @shiftslayer
+ @shiftslayer 		z	x	c	v	b	\	m	,	.	/ @shiftslayer
 
  				lalt			spc	
 )  
+
 
 (deflayer shiftsymbols 
 caps
@@ -53,7 +54,7 @@ lrld
 					_  _ _
  tab		RS-1	RS-2	RS-3	RS-4	RS-5			RS-`		RS--	RS-=	RS-[	RS-] [	]
  
- @caps2esc		RS-6	RS-7	RS-8	RS-9	RS-0			h	j	k	l	;	'  ret
+ @caps2esc		RS-6	RS-7	RS-8	RS-9	RS-0			RS-\ RS-, RS-. RS-/	;	'  ret
 
  lsft 		z	x	c	v	b				RS-\	m , . /	lsft
 
@@ -64,11 +65,12 @@ lrld
 
 (defalias
 	esc2caps(tap-hold $tt $ht esc lctrl)
-	caps2esc(tap-hold $tt $ht esc lctrl)
-	;;vimmod(tap-hold $tt $ht ; S-;)
+	caps2esc(tap-hold $tt $ht esc S-;)
+  mod4'(tap-hold $tt $ht ' C-b)
+vimmod(tap-hold $tt $ht h S-;)
   ;;vimallayer(tap-hold $tt $ht ; (layer-while-help vimlayer))
   rsftmod(tap-hold $tt $ht ; rsft)
-	tmuxmod(tap-hold $tt $ht ' C-b)
+	tmuxmod(tap-hold $tt $ht g C-b)
 	ninemet(tap-hold $tt $ht 9 lmet)
 	threemet(tap-hold $tt $ht 3 lmet)
 	laltmet(tap-hold $tt $ht lalt lmet)
@@ -77,76 +79,17 @@ lrld
 	slashmet(tap-hold $tt $ht / lmet )
 	symbollayer(tap-hold $tt $ht spc (layer-while-held symbols))
 	shiftslayer(tap-hold $tt $ht spc (layer-while-held shiftsymbols))
+
+  ;;home row mods
+
+  mod4a(tap-hold $tt $ht a lmet)
+  mod4s(tap-hold $tt $ht s lalt)
+  mod4d(tap-hold $tt $ht d lsft)
+  mod4f(tap-hold $tt $ht f lctrl)
+
+  mod4j(tap-hold $tt $ht j rctrl)
+  mod4k(tap-hold $tt $ht k rsft)
+  mod4l(tap-hold $tt $ht l ralt)
+  mod4;(tap-hold $tt $ht ; rmet)
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

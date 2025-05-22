@@ -20,4 +20,7 @@ return {
 
   },
 
+  --code_runner keymaps
+  vim.keymap.set("n", "<leader>run", ":RunCode<CR>"),
+  vim.keymap.set("n", "<leader>er", ":RunClose<CR>"),
 }
