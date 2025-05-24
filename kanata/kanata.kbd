@@ -24,7 +24,7 @@ caps
 lrld
 			lmet		lmet S-; 
 
-tab  	q	w	e	r	t			y	u	i	o	p lctrl lalt
+tab  	q	w	@arrowmod	r	t			y	u	i	o	p @moreSymbolsLayer lalt
 
 @caps2esc	@mod4a @mod4s @mod4d @mod4f  @tmuxmod			@vimmod	@mod4j @mod4k @mod4l @mod4;  @mod4'		ret
 
@@ -33,14 +33,42 @@ lsft	z	x	c	v	b			n	m	,	.	/	rsft
 				lalt		@symbollayer		
 	
 )
+(deflayer arrows
 
-(deflayer symbols
+caps
+lrld
+			lmet		lmet S-; 
+
+tab  	q	w	e	r	t			y	u	i	o	p lctrl lalt
+
+@caps2esc	@mod4a @mod4s @mod4d @mod4f  @tmuxmod				lft down up rght @mod4;  @mod4'		ret
+
+lsft	z	x	c	v	b			n	m	,	.	/	rsft
+						
+				lalt		@symbollayer		
+	
+)
+
+(deflayer moreSymbols
 caps
 lrld
 							_  _ _
+
+ caps		`	-	=	[	]			y	u	o	i	p	lctrl	lalt
+
+ @shiftslayer		\	,	.	/	0			_ @mod4j  @mod4k @mod4l	@shiftslayer bspc	ret
+
+ @shiftslayer 		z	x	c	v	b	\	m	,	.	/ @shiftslayer
+
+ 				lalt			spc	
+)
+(deflayer symbols
+caps
+lrld
+						_  _ _
  caps		1	2	3	4	5			`	-	=	[	]	lctrl	lalt
 
- @shiftslayer		6	7	8	9	0			\	,	.	/	@shiftslayer bspc	ret
+ @shiftslayer		6	7	8	9	0			_  @mod4j  @mod4k  @mod4l	@shiftslayer bspc	ret
 
  @shiftslayer 		z	x	c	v	b	\	m	,	.	/ @shiftslayer
 
@@ -79,6 +107,8 @@ vimmod(tap-hold $tt $ht h S-;)
 	slashmet(tap-hold $tt $ht / lmet )
 	symbollayer(tap-hold $tt $ht spc (layer-while-held symbols))
 	shiftslayer(tap-hold $tt $ht spc (layer-while-held shiftsymbols))
+	arrowmod(tap-hold $tt $ht e (layer-while-held arrows))
+  moreSymbolsLayer(tap-hold $tt $ht [ (layer-while-held moreSymbols))
 
   ;;home row mods
 
@@ -92,4 +122,5 @@ vimmod(tap-hold $tt $ht h S-;)
   mod4l(tap-hold $tt $ht l ralt)
   mod4;(tap-hold $tt $ht ; rmet)
 )
+
 
